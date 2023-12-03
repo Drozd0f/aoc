@@ -1,4 +1,4 @@
-from year2023.day2 import solution
+from year2023.day3 import solution
 
 
 def main():
