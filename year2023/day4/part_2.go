@@ -6,9 +6,7 @@ import (
 	"strconv"
 )
 
-func CalculatePart2(fileName string) int64 {
-	lines := ReadAllFile(fileName)
-
+func CalculatePart2(lines []string) int64 {
 	cardsMap := make(map[int]int, len(lines))
 
 	var result int64
