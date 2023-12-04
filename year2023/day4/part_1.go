@@ -1,38 +1,12 @@
 package day4
 
 import (
-	"bufio"
-	"fmt"
-	"os"
 	"regexp"
 	"slices"
 	"strings"
 )
 
-func ReadAllFile(fileName string) []string {
-	file, err := os.Open(fmt.Sprintf("input/%s", fileName))
-	if err != nil {
-		panic(err)
-	}
-	defer file.Close()
-
-	scanner := bufio.NewScanner(file)
-
-	var lines []string
-	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
-	}
-
-	if err = scanner.Err(); err != nil {
-		panic(err)
-	}
-
-	return lines
-}
-
-func CalculatePart1(fileName string) int64 {
-	lines := ReadAllFile(fileName)
-
+func CalculatePart1(lines []string) int64 {
 	var result int64
 	for _, line := range lines {
 		result += calculatePoints(extractNumbers(line))
