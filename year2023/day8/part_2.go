@@ -40,17 +40,3 @@ func calculatePartTwo(navigator string, nodes nodesMap) int64 {
 
 	return findLCM(steps)
 }
-
-func updateCurNodes(turn string, nodes nodesMap, curNodes []string) ([]string, bool) {
-	var isExitFound = true
-	newCurNodes := make([]string, len(curNodes))
-	for idx, curNode := range curNodes {
-		if !strings.Contains(curNode, exitNodeSymbol) {
-			isExitFound = false
-		}
-
-		newCurNodes[idx] = choiceNode(turn, curNode, nodes)
-	}
-
-	return newCurNodes, isExitFound
-}
