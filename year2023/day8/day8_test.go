@@ -1,12 +1,13 @@
 package day8
 
 import (
+	"github.com/Drozd0f/year2023/day8/input"
 	"github.com/Drozd0f/year2023/reader"
 	"testing"
 )
 
 func newNavigatorAndNodes() (string, nodesMap) {
-	lines := reader.ReadAllFile("input/input.txt")
+	lines := reader.ReadAllFile(input.Input, "input.txt")
 
 	return lines[0], newNodes(lines[2:])
 }

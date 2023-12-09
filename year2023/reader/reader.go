@@ -2,11 +2,19 @@ package reader
 
 import (
 	"bufio"
-	"os"
+	"embed"
 )
 
-func ReadAllFile(path string) []string {
-	file, err := os.Open(path)
+const (
+	defaultPuzzleInput = "input.txt"
+)
+
+func ReadAllFile(fs embed.FS, path string) []string {
+	if path == "" {
+		path = defaultPuzzleInput
+	}
+
+	file, err := fs.Open(path)
 	if err != nil {
 		panic(err)
 	}
