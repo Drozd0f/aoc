@@ -1,27 +1,27 @@
 package day9
 
 import (
-	"github.com/Drozd0f/year2023/day9/input"
-	"github.com/Drozd0f/year2023/reader"
 	"testing"
 )
 
-func testSequence() [][]int64 {
-	return parceSequence(reader.ReadAllFile(input.Input, "input.txt"))
+var testHistories = [][]int64{
+	{0, 3, 6, 9, 12, 15},
+	{1, 3, 6, 10, 15, 21},
+	{10, 13, 16, 21, 30, 45},
 }
 
 func BenchmarkDayEightPartOne(b *testing.B) {
-	sequence := testSequence()
+	//sequence := testSequence()
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		calculatePartOne(sequence)
+		calculatePartOne(testHistories)
 	}
 }
 
 func BenchmarkDayEightPartTwo(b *testing.B) {
-	sequence := testSequence()
+	//sequence := testSequence()
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		calculatePartTwo(sequence)
+		calculatePartTwo(testHistories)
 	}
 }
