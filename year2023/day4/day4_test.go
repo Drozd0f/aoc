@@ -1,10 +1,10 @@
 package day4
 
 import (
-	"github.com/Drozd0f/year2023/day4/input"
 	"testing"
 
-	"github.com/Drozd0f/year2023/reader"
+	"github.com/Drozd0f/reader"
+	"github.com/Drozd0f/year2023/day4/input"
 )
 
 var (
