@@ -1,9 +1,10 @@
 package day8
 
 import (
-	"github.com/Drozd0f/year2023/day8/input"
-	"github.com/Drozd0f/year2023/reader"
 	"testing"
+
+	"github.com/Drozd0f/reader"
+	"github.com/Drozd0f/year2023/day8/input"
 )
 
 func newNavigatorAndNodes() (string, nodesMap) {

@@ -2,8 +2,9 @@ package day9
 
 import (
 	"fmt"
-	"github.com/Drozd0f/year2023/tools"
 	"strings"
+
+	"github.com/Drozd0f/tools"
 )
 
 func parceSequence(lines []string) [][]int64 {

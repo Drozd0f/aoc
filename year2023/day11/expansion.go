@@ -3,7 +3,7 @@ package day11
 import (
 	"slices"
 
-	"github.com/Drozd0f/year2023/tools"
+	"github.com/Drozd0f/tools"
 )
 
 type expansion struct {
