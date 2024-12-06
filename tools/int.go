@@ -25,3 +25,7 @@ func Abs(a int64) int64 {
 
 	return a
 }
+
+func Between(n, left, right int) bool {
+	return left <= n && n <= right
+}
