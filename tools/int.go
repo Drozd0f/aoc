@@ -5,10 +5,6 @@ import (
 	"strconv"
 )
 
-func MustInt64FromString(s string) int64 {
-	return int64(MustIntFromString(s))
-}
-
 func MustIntFromString(s string) int {
 	number, err := strconv.Atoi(s)
 	if err != nil {
@@ -18,10 +14,6 @@ func MustIntFromString(s string) int {
 	return number
 }
 
-func Abs(a int64) int64 {
-	if a < 0 {
-		return -a
-	}
-
-	return a
+func MustInt64FromString(s string) int64 {
+	return int64(MustIntFromString(s))
 }
