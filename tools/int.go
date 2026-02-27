@@ -82,3 +82,7 @@ func CountFromInt[T Int](d, sub T) int {
 
 	return res
 }
+
+func Between(n, left, right int) bool {
+	return left <= n && n <= right
+}
